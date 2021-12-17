@@ -19,8 +19,11 @@ module.exports = {
         static: './dist',
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Development',
+        new HtmlWebpackPlugin({hash: true,
+            title: 'My Awesome application',
+            myPageHeader: 'Hello World',
+            template: './src/index.html',
+            filename: './index.html' //relative to root of the application
         }),
     ],
     output: {

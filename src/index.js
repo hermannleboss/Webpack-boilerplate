@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './style.scss';
 import printMe from './print.js';
-
+/*
 function component() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
@@ -16,6 +16,6 @@ function component() {
     element.appendChild(btn);
 
     return element;
-}
+}*/
 
 document.body.appendChild(component());
