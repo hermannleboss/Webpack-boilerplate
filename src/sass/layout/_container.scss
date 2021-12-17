@@ -1,0 +1,17 @@
+.container{
+  margin: 0px;
+  padding: 165px 24px ;
+  @media (min-width: 768px) {
+    padding: 116px 165px;
+  }
+  &--fluid{
+    padding: 24px ;
+    @media (min-width: 768px) {
+      padding: 0px;
+    }
+  }
+  &__small
+  {
+    max-width: 540px;
+  }
+}

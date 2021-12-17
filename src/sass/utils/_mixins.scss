@@ -1,0 +1,68 @@
+@mixin hidden{
+  display: none;
+}
+@mixin grid{
+  display: grid;
+  justify-items: center;
+  &__col{
+    &--1{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    &--2{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    &--3{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &--4{
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  &--1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  &--2{
+    grid-template-columns: auto auto;
+  }
+  &--3{
+    grid-template-columns: auto auto auto;
+  }
+  &--4{
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@mixin block{
+  display: block;
+}
+
+@mixin display($value){
+
+  display: $value;
+  &--sm{
+    @media (min-width: 640px) {
+      display: $value;
+    }
+  }
+  &--md {
+    @media (min-width: 768px) {
+      display: $value;
+    }
+  }
+  &--lg {
+    @media (min-width: 1024px) {
+      display: $value;
+    }
+  }
+  &--xl {
+    @media (min-width: 1280px) {
+      display: $value;
+    }
+  }
+  &--xl2 {
+    @media (min-width: 1536px) {
+      display: $value;
+    }
+  }
+
+}
