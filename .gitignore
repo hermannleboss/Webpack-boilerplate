@@ -16,3 +16,4 @@
 .prettierignore
 .idea
 node_modules
+dist
