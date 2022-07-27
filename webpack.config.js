@@ -50,7 +50,22 @@ module.exports = {
                     process.env.NODE_ENV !== "production"
                         ? "style-loader"
                         : MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    'css-loader', {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        "autoprefixer",
+                                        {
+                                            // Options
+                                        },
+                                    ],
+                                ],
+                            },
+                            sourceMap: true,
+                        },
+                    },
                     'sass-loader'],
             },
             {
